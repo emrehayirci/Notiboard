@@ -8,3 +8,5 @@
   <p><a class="btn btn-primary btn-lg" href="#" role="button">UYE OL!</a></p>
 </div>
 <%= link_to "Edit Board" , patch_board_path(@board.id), class: "btn btn-primary btn-lg"%>
+
+<%= image_tag @board.logo.url if @board.logo.present? %>

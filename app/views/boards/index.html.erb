@@ -3,9 +3,13 @@
   <% @boards.each do |board| %>
   <div class = "col-md-4">
     <div class="panel panel-default">
-      <div class="panel-heading"><%= link_to board.title , board_path(board.id) %></div>
+      <div class="panel-heading">
+        <%= image_tag board.logo.url(:thumb) %>
+        <%= link_to board.title , board_path(board.id) %></div>
       <div class="panel-body">
         <%= board.description %>
+
+
       </div>
     </div>
   </div>
